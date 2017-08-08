@@ -8,10 +8,10 @@ Privitera-Johnson, K., and Johnson, K.F. (in prep). The effects of anomalous rec
 ## To do
 - [ ] Look at estimated recruitment of [POP](https://github.com/CWetzel/POP_2017) and see how large in magnitude the later 201? recruitment events were. KPJ
 - [ ] Document sigma_r of long- and medium lived species to see if we should look at multiple values. KPJ
-- [ ] get Fisheries Research csl. KFJ
-- [ ] Write R code to run a single model with case files KFJ
-- [ ] Introduction
-- [ ] Abstract (due August 31st)
+- [x] get Fisheries Research csl. KFJ
+- [ ] Write R code to run a single model with case files. KFJ
+- [ ] Introduction. KPJ
+- [ ] Abstract (due August 31st). KFJ KPJ
 
 ## Scenarios
 
