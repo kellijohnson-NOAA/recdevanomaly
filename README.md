@@ -13,7 +13,7 @@ Privitera-Johnson, K., and Johnson, K.F. (in prep). The effects of anomalous rec
 ## Scenarios
 
 * Fishing
-    * 
+    * Constant
     * Fished down and recovering
   * Life history
     * Long
