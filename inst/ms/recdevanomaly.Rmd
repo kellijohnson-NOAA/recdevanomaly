@@ -1,0 +1,49 @@
+---
+title: "Anomalous recruitment events and what shit it does"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+author:
+  - K.M. Privitera-Johnson^[School of Aquatic and Fishery Sciences, University of Washington, Box 355020, Seattle, WA 98195, USA]
+  - K.F. Johnson^[Fishery Resource Analysis and Monitoring Division, Northwest Fisheries Science Center, National Oceanic and Atmospheric Administration, 2725 Montlake Boulevard East, Seattle, WA 98112, USA]
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    fig_caption: true
+bibliography: refs.bib
+csl: fisheries-research.csl
+abstract:
+  Why are you doing this? [context and aim] What did you do? [methods] What did you find? [core results – say something useful – no motherhood statements or deference to the main text!] What does this mean? [interpretation in context] What is it good for? [application]
+keywords: recruitment, age-structured stock-assessment model, simulation, Pacific ocean perch
+output:
+  word_document:
+    reference_docx: recdevanomaly.docx
+bibliography: "references.bib"
+header-includes:
+    - \usepackage{bm}
+    - \usepackage{natbib}
+    - \usepackage[utf8]{inputenc}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+# Introduction
+
+
+# Methods
+
+
+# Results
+
+
+# Discussion
+
+
+# Tables
+
+
+# Figures
+
+
+# Bibliography
