@@ -1,38 +1,68 @@
 ---
-title: "Anomalous recruitment events and what shit it does"
+title: "Anomalous recruitment events and what kind of shit it does"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 author:
   - K.M. Privitera-Johnson^[School of Aquatic and Fishery Sciences, University of Washington, Box 355020, Seattle, WA 98195, USA]
-  - K.F. Johnson^[Fishery Resource Analysis and Monitoring Division, Northwest Fisheries Science Center, National Oceanic and Atmospheric Administration, 2725 Montlake Boulevard East, Seattle, WA 98112, USA]
+  - K.F. Johnson^[Fishery Resource Assessment and Monitoring Division, Northwest Fisheries Science Center, National Oceanic and Atmospheric Administration, 2725 Montlake Blvd E, Seattle, WA 98112, USA]
 output:
+#  word_document:
+#    reference_docx: recdevanomaly.docx
   rmarkdown::html_vignette:
     toc: true
     number_sections: true
     fig_caption: true
-bibliography: refs.bib
+bibliography: ref.bib
 csl: fisheries-research.csl
 abstract:
-  Why are you doing this? [context and aim] What did you do? [methods] What did you find? [core results – say something useful – no motherhood statements or deference to the main text!] What does this mean? [interpretation in context] What is it good for? [application]
+  Why are you doing this? [context and aim] What did you do? [methods] What did you find? [core results; say something useful; no motherhood statements] What does this mean? [interpretation in context] What is it good for? [application]
 keywords: recruitment, age-structured stock-assessment model, simulation, Pacific ocean perch
-output:
-  word_document:
-    reference_docx: recdevanomaly.docx
-bibliography: "references.bib"
 header-includes:
     - \usepackage{bm}
     - \usepackage{natbib}
     - \usepackage[utf8]{inputenc}
 ---
 
-```{r, echo = FALSE, message = FALSE}
+```{r setup, echo = FALSE, message = FALSE}
+
+# Variables
+my.cores <- 1
+my.replicates <- 2
+my.species <- "cod"
+
+# Logistics
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+if (!"r4ss" %in% library()$results[, 1]) {
+  devtools::install_github("r4ss/r4ss", quiet = TRUE)
+}
+if (!"ss3sim" %in% library()$results[, 1]) {
+  devtools::install_github("ss3sim/ss3sim", quiet = TRUE)
+}
+if (!"ss3models" %in% library()$results[, 1]) {
+  devtools::install_github("ss3sim/ss3models", quiet = TRUE)
+}
+library(ggplot2, warn.conflicts = FALSE, quietly = TRUE, verbose = FALSE)
+library(r4ss, warn.conflicts = FALSE, quietly = TRUE, verbose = FALSE)
+library(ss3sim, warn.conflicts = FALSE, quietly = TRUE, verbose = FALSE)
+library(ss3models, warn.conflicts = FALSE, quietly = TRUE, verbose = FALSE)
+
+# Create directories
+dir.create("cases", showWarnings = FALSE)
+
+# Source code
+ignore <- sapply(dir(file.path("..", "..", "R"), full.names = TRUE), source)
 ```
 
 # Introduction
 
 
 # Methods
+```{r run_analysis, eval = TRUE, echo = FALSE}
+run_recdevanomaly(
+  species = my.species,
+  replicates = my.replicates,
+  cores = my.cores)
 
+```
 
 # Results
 
@@ -44,6 +74,6 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 
 
 # Figures
-
+![Relative error of spawning stock biomass versus time.](steepnessSSB.png)
 
 # Bibliography
