@@ -15,6 +15,13 @@ Privitera-Johnson, K., and Johnson, K.F. (in prep). The effects of anomalous rec
 - [ ] run_recdevs(): Make more generalizeable (take multiple years and multiple anomaly %s). KPJ
 - [ ] Check for deadline of special issue
 - [ ] Create additional recruitment deviation situations and compare results
+- [ ] Change the example species to one of the following: hake, yellow, flatfish. KPJ
+- [ ] Look at the POP rec dev magnitudes and pick multiple magnitudes. KPJ
+- [ ] Make a multi-panel plot that compares the different recdev situations created. KPJ
+- [ ] Merge the methods section for ss3sim from other papers. KFJ
+- [ ] Look over KPJ basic intro outline and add suggestions if anything missed. KFJ
+
+
 
 ## Scenarios
 
