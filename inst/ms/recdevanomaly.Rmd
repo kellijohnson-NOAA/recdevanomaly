@@ -53,7 +53,48 @@ ignore <- sapply(dir(file.path("..", "..", "R"), full.names = TRUE), source)
 ```
 
 # Introduction
-
+ Outline
+ Driving Question: How do anomalous recruitment events affect the performance of age-structured stock assessment models?
+ 
+  P1
+  
+  What was observed in the 2017 stock assessment cycle with POP?
+  
+  What is an anomalous recruitment event?
+  
+  Are there other examples of such events?
+  
+  Why do we think these events happen?
+  
+  What are some examples in PNW?
+  
+  P2
+  
+  How does fisheries management work in PNW/PFMC Groundfish?
+  
+  What are age-structured stock assessment models?
+  
+  What are recruitment deviations?
+  
+  How are recruitment deviations used in age-structured stock assessment models?
+  
+  What are the potential implications for management?
+  
+  P3
+  
+  What is a Monte Carlo simulation?
+  
+  How has this tool been used previously?
+  
+  What is ss3sim?
+  
+  P4
+  
+  What is the driving question of our paper?
+  
+  How do we plan on addressing the question?
+  
+  Why are PFMC rockfishes a good case study group?
 
 # Methods
 ```{r run_analysis, eval = TRUE, echo = FALSE}
