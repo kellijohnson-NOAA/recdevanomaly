@@ -6,8 +6,8 @@ A Monte Carlo simulation with [ss3sim](www.github.com/ss3sim/ss3sim) to assess t
 Privitera-Johnson, K., and Johnson, K.F. (in prep). The effects of anomalous recruitment events on the output of age-structured stock assessment models. [Fisheries Research](https://www.elsevier.com/journals/fisheries-research/0165-7836/guide-for-authors), 00(00): 00-00.
 
 ## To do
-- [ ] Look at estimated recruitment of [POP](https://github.com/CWetzel/POP_2017) and see how large in magnitude the later 201? recruitment events were. KPJ
-- [ ] Document sigma_r of long- and medium lived species to see if we should look at multiple values. KPJ
+- [x] Look at estimated recruitment of [POP](https://github.com/CWetzel/POP_2017) and see how large in magnitude the later 201? recruitment events were. KPJ
+- [x] Document sigma_r of long- and medium lived species to see if we should look at multiple values. KPJ
 - [x] get Fisheries Research csl. KFJ
 - [ ] Write R code to run a single model with case files. KFJ
 - [ ] Introduction. KPJ
