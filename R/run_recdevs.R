@@ -1,5 +1,17 @@
+#' Generate a matrix of random recruitment deviations with anomalies
+#'
+#' @param species
+#' @param AR
+#' @param nyears
+#' @param replicates
+#' @param verbose
+#' @param year
+#' @param percent
+#'
 run_recdevs <- function(species, AR = 0.0, nyears = 100, replicates = 100,
   verbose = FALSE, year = 90, percent = 200) {
+ # year can handle multiple years
+ # percent to handle multiple numbers
 
   returnme <- list()
 
