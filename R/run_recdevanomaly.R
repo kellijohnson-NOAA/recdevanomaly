@@ -1,9 +1,12 @@
 #' Run the analysis
 #'
-#' @param name A name for the folder you want to run things in.
+#' @param species
+#' @param replicates
+#' @param cores The number of cores that you want to run the analysis on.
+#' The default is one, which leads to things not running in parallel.
 #' @authors Kelli Faye Johnson
 #'
-run_recdevanomaly <- function (species, replicates, cores) {
+run_recdevanomaly <- function (species, replicates, cores = 1) {
 
   set.seed(20)
   use.cases <- list(D = "index", A = "agecomp", L = "lcomp", F = "F")
