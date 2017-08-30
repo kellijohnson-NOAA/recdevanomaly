@@ -1,6 +1,6 @@
 #' Run the analysis
 #'
-#' @param species
+#' @param species A vector of species
 #' @param replicates Can either be a sequence or a number for the number
 #' of times you want to run a scenario. If a single number, then all 
 #' replicates in \code{1:replciates} will be ran.
