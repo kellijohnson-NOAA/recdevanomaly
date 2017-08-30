@@ -20,7 +20,7 @@ run_recdevanomaly <- function (species, replicates = 1, cores = 1) {
     if (numcores <= cores) stop("You specified too many cores",
     	" because your computer only has ", numcores)
     cl <- makeCluster(cores)
-  registerDoParallel(cl)
+    registerDoParallel(cl)
   }
 
   use.cases <- list(D = "index", A = "agecomp", L = "lcomp", F = "F")
@@ -56,5 +56,7 @@ run_recdevanomaly <- function (species, replicates = 1, cores = 1) {
   ggplot2::ggsave(filename = "steepnessSSB.png",
     path = getwd())
   dev.off()
+
+  if (cores > 1) stopCluster(cl)
 
 }
