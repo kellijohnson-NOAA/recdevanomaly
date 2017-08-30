@@ -1,14 +1,18 @@
 #' Run the analysis
 #'
 #' @param species
-#' @param replicates
+#' @param replicates Can either be a sequence or a number for the number
+#' of times you want to run a scenario. If a single number, then all 
+#' replicates in \code{1:replciates} will be ran.
 #' @param cores The number of cores that you want to run the analysis on.
 #' The default is one, which leads to things not running in parallel.
 #' @authors Kelli Faye Johnson
 #'
-run_recdevanomaly <- function (species, replicates, cores = 1) {
+run_recdevanomaly <- function (species, replicates = 1, cores = 1) {
 
   set.seed(20)
+
+  if (length(replicates) == 1) replicates <- 1:replicates
 
   if (cores > 1) {
     numcores <- Sys.getenv("NUMBER_OF_PROCESSORS")
@@ -18,7 +22,7 @@ run_recdevanomaly <- function (species, replicates, cores = 1) {
     cl <- makeCluster(cores)
   registerDoParallel(cl)
   }
-  
+
   use.cases <- list(D = "index", A = "agecomp", L = "lcomp", F = "F")
 
   run_cases(species = species)
@@ -31,7 +35,7 @@ run_recdevanomaly <- function (species, replicates, cores = 1) {
 
 
   run_ss3sim(
-    iterations = 1:replicates,
+    iterations = replicates,
     scenarios = c("F1-D0-A100-L100-cod"),
     user_recdevs = recdevs[[1]][[1]],
     bias_adjust = FALSE,
