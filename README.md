@@ -11,7 +11,6 @@ Privitera-Johnson, K., and Johnson, K.F. (in prep). The effects of anomalous rec
 - [x] get Fisheries Research csl. KFJ
 - [x] Write R code to run a single model with case files. KFJ
 - [ ] Introduction. KPJ
-- [ ] Abstract (due August 31st). KFJ KPJ
 - [ ] run_recdevs(): Make more generalizeable (take multiple years and multiple anomaly %s). KPJ
 - [ ] Check for deadline of special issue
 - [ ] Create additional recruitment deviation situations and compare results
