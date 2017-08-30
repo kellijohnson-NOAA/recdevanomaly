@@ -9,6 +9,16 @@
 run_recdevanomaly <- function (species, replicates, cores = 1) {
 
   set.seed(20)
+
+  if (cores > 1) {
+    numcores <- Sys.getenv("NUMBER_OF_PROCESSORS")
+    mode(cores) <- "numeric"
+    if (numcores <= cores) stop("You specified too many cores",
+    	" because your computer only has ", numcores)
+    cl <- makeCluster(cores)
+  registerDoParallel(cl)
+  }
+  
   use.cases <- list(D = "index", A = "agecomp", L = "lcomp", F = "F")
 
   run_cases(species = species)
